@@ -1,0 +1,14 @@
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/bin/Debug/net9.0/csharpnotes
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/bin/Debug/net9.0/csharpnotes.deps.json
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/bin/Debug/net9.0/csharpnotes.runtimeconfig.json
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/bin/Debug/net9.0/csharpnotes.dll
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/bin/Debug/net9.0/csharpnotes.pdb
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.AssemblyInfoInputs.cache
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.AssemblyInfo.cs
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.csproj.CoreCompileInputs.cache
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.dll
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/refint/csharpnotes.dll
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.pdb
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/csharpnotes.genruntimeconfig.cache
+/Users/uygarmuntas/Desktop/uygar/csharpnotes/obj/Debug/net9.0/ref/csharpnotes.dll
