@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("csharpnotes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97093d39314b60931b2341f86d8e336e1f4bfa62")]
 [assembly: System.Reflection.AssemblyProductAttribute("csharpnotes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("csharpnotes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

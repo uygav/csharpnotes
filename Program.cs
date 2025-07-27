@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Net.WebSockets;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
@@ -195,6 +196,25 @@ namespace csharpnotes
 
 
             // ---------------------------------------------------------- numeric formatting
+
+            double valued = 1000D / 12.34;
+            Console.WriteLine(valued);
+            Console.WriteLine(string.Format("{0}", valued));
+            Console.WriteLine(string.Format("{0:0}", valued));
+            Console.WriteLine(string.Format("{0:0.00}", valued));
+
+            double money = -10D / 3D;
+
+            Console.WriteLine(money);
+            Console.WriteLine(string.Format("$10 / $3 = ${0:0.00}"));
+            Console.WriteLine(money.ToString("C"));
+            Console.WriteLine(money.ToString("C0"));
+            Console.WriteLine(money.ToString("C1"));
+            Console.WriteLine(money.ToString("C2"));
+
+            Console.WriteLine(money.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-GB")));
+
 
 
             // ---------------------------------------------------------- tryParse function
@@ -417,7 +437,19 @@ namespace csharpnotes
 
             // ---------------------------------------------------------- lists
 
+            // lists are more flexible version of arrays 
 
+            /*int[] numbers4 = new int[]
+            {
+                0,1,2,3,4,5,6,7,8,9,10
+            };*/
+            //
+            /*List<int> listNumbers = new List<int>()
+            {
+             1,2,3,4
+            };*/
+
+            // or you can add variables after defining the list if you want
             List<int> listNumbers = new List<int>();
 
             for (int i = 0; i < 3; i++)
@@ -439,7 +471,7 @@ namespace csharpnotes
             }
 
             // ---------------------------------------------------------- dictionary 
-
+            // dictionaries are more flexible version of lists 
             /*Dictionary<int, string> names = new Dictionary<int, string>
             {
                 // key value pair
@@ -570,12 +602,29 @@ namespace csharpnotes
             {
                 int a;
                 GetAge(out a);
-                Console.WriteLine(a);
+                Console.WriteLine(a); output:42
             } */
 
-            // ---------------------------------------------------------- reference parameters
+            // -------------------------------------------------- reference and output parameters 
+            // summary of both : both allow us to change the value of the parameter function
+            // ref requires the variable to be initialized before the function call
+            // out requires the variable to be assigned a value inside the function before the function ends 
+            /*static void ProcessNumbers(ref int a, out int b)
+            {
+                a += 10;     // Modify the value passed with ref
+                b = a * 2;   // Initialize the out parameter based on the new value of a
+            }
 
-            // --- ref allows us to change the value of the parameter within the function
+            static void Main()
+            {
+                int x = 5;   // ref must be initialized
+                int y;       // out does NOT need to be initialized
+
+                ProcessNumbers(ref x, out y);
+
+                Console.WriteLine("x (ref): " + x); // x is now 15
+                Console.WriteLine("y (out): " + y); // y is now 30
+            }*/
 
             // ---------------------------------------------------------- exception handling
 
@@ -619,15 +668,94 @@ namespace csharpnotes
 
             // ---------------------------------------------------------- local/auto window
 
-            // ---------------------------------------------------------- structure and constructor
-
-            // you can not declare different data type in one array ,
-            // 
+            // ---------------------------------------------------------- structure and constructor            
 
             Person person = ReturnPerson();
             Console.WriteLine($" {person.name} - {person.age} {person.birthMonth}");
 
-            // ---------------------------------------------------------- classes
+            // ---------------------------------------------------------- classes, structures and constructors another ex
+
+
+            /*
+                    class Person
+                    {
+                        public string Name;
+                        public int Age;
+
+                        public Person(string name, int age) // Constructor
+                        {
+                            Name = name;
+                            Age = age;
+                        }
+
+                        public void SayHi()
+                        {
+                            Console.WriteLine($"Hi! I'm {Name} and I'm {Age} years old.");
+                        }
+                    }
+
+                    struct Point
+                    {
+                        public int X;
+                        public int Y;
+
+                        public Point(int x, int y) // Constructor
+                        {
+                            X = x;
+                            Y = y;
+                        }
+
+                        public void Show()
+                        {
+                            Console.WriteLine($"Point is at ({X}, {Y})");
+                        }
+                    }
+
+                    class Program
+                    {
+                        static void Main()
+                        {
+                            Person person = new Person("Alice", 30);
+                            person.SayHi();
+
+                            Point pt = new Point(5, 10);
+                            pt.Show ();
+                        }
+                    }
+            */
+
+            // ---------------------------------------------------------- inheritence 
+            /*
+            class Animal  // Base (parent) class
+        {
+            public string Name;
+
+            public void Speak()
+            {
+                Console.WriteLine("Animal makes a sound.");
+            }
+        }
+
+        class Dog : Animal  // Dog inherits from Animal
+        {
+            public void Bark()
+            {
+                Console.WriteLine("Dog barks!");
+            }
+        }
+
+        class Program
+        {
+            static void Main()
+            {
+                Dog dog = new Dog();
+                dog.Name = "Rex";      // Inherited from Animal
+                dog.Speak();           // Inherited method
+                dog.Bark();            // Own method
+
+                Console.WriteLine($"Dog's name is {dog.Name}");
+            }
+        }*/
 
 
 
